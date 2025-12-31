@@ -8,7 +8,10 @@ frappe.listview_settings["Attendance"] = {
 			return [__(doc.status), "red", "status,=," + doc.status];
 		} else if (doc.status == "Half Day") {
 			return [__(doc.status), "orange", "status,=," + doc.status];
+		} else if (doc.status == "Outdoor") {
+			return [__(doc.status), "blue", "status,=," + doc.status];
 		}
+
 	},
 
 	onload: function (list_view) {
@@ -71,7 +74,7 @@ frappe.listview_settings["Attendance"] = {
 						label: __("Status"),
 						fieldtype: "Select",
 						fieldname: "status",
-						options: ["Present", "Absent", "Half Day", "Work From Home"],
+						options: ["Present", "Absent", "Half Day", "Work From Home", "Outdoor"],
 						reqd: 1,
 					},
 					{
