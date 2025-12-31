@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-description: Report a bug encountered while using Frappe HR
+description: Report a bug encountered while using Citta HR
 labels: ["bug"]
 
 body:
