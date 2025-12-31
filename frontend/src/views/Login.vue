@@ -5,7 +5,7 @@
 				<div class="flex flex-col mx-auto gap-3 items-center">
 					<FrappeHRLogo class="h-8 w-8" />
 					<div class="text-3xl font-semibold text-gray-900 text-center">
-						{{ __("Login to Frappe HR") }}
+						{{ __("Login to Citta HR") }}
 					</div>
 				</div>
 
@@ -13,7 +13,7 @@
 					<form class="flex flex-col space-y-4" @submit.prevent="submit">
 						<Input
 							:label="__('Email')"
-							:placeholder="__('johndoe@mail.com')"
+							:placeholder="__('example@gmail.com')"
 							v-model="email"
 							type="text"
 							autocomplete="username"
