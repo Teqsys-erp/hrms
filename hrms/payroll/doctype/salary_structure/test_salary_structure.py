@@ -233,6 +233,7 @@ def create_salary_structure_assignment(
 	payroll_period=None,
 	base=None,
 	allow_duplicate=False,
+	leave_encashment_amount_per_day=None,
 ):
 	if not currency:
 		currency = erpnext.get_default_currency()
@@ -265,6 +266,8 @@ def create_salary_structure_assignment(
 	salary_structure_assignment.payroll_payable_account = get_payable_account(company)
 	salary_structure_assignment.company = company or erpnext.get_default_company()
 	salary_structure_assignment.income_tax_slab = income_tax_slab
+	if leave_encashment_amount_per_day:
+		salary_structure_assignment.leave_encashment_amount_per_day = leave_encashment_amount_per_day
 	salary_structure_assignment.save(ignore_permissions=True)
 	salary_structure_assignment.submit()
 	return salary_structure_assignment
